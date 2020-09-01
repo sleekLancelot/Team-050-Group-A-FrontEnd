@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* nav bar */
+nav#navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px auto;
+}
+
+ul.main-menu {
+  display: flex;
+}
+
+ul.main-menu li {
+  list-style-type: none;
+  padding: 0 25px;
+  font-size: 18px;
+}
+
+nav ul li:hover {
+  border-bottom: 1px solid #767676;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+nav ul li:active {
+  border: 1px #00e6b0 dashed;
+}
+/* nav ul li:visited {
+  color: black;
+  border: 1px #00eb80 solid;
+} */
+/* nav bar */
+
+/* global anchor rule */
+a {
+  color: #767676;
+  text-decoration: none;
+}
+/* global anchor rule */
+
+/* home css */
+div.home {
+  display: flex;
+}
+
+div.home main {
+  z-index: 10;
+  /* width: 50vw; */
+  padding-top: 50px;
+}
+
+div.home main h1 {
+  color: #00e6b0;
+  padding-top: 30px;
+  width: 30vw;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+div.home main p {
+  color: #767676;
+  padding-top: 30px;
+  font-size: 19px;
+  line-height: 25px;
+  width: 450px;
+}
+
+div.access {
+  display: flex;
+  /* justify-content: space-around; */
+  padding-top: 70px;
+}
+
+div.access div.btn {
+  width: 100px;
+  height: 40px;
+  padding: 14px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+a div.btn {
+  color: black;
+}
+
+div.access div.btn:hover {
+  cursor: pointer;
+  border: 2px solid rgba(55, 55, 143, 0.4);
+}
+
+div.home-left img {
+  z-index: 1;
+  padding-top: 20px;
+}
+/* home css */
+
+div.coming {
+  width: 90%;
+  margin: 20px auto;
+  background: transparent;
+  text-align: center;
+}
+
+/* footer css */
+footer#main-footer {
+  position: relative;
+  bottom: 0;
+  padding-top: 10px;
+}
+/* footer css */
