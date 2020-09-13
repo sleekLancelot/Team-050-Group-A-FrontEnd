@@ -1,0 +1,154 @@
+/* Login or Register page */
+.formBox {
+    width: 450px;
+    height: auto;
+    background: rgba(255, 255, 255);
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+.btnBox {
+    position: relative;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    margin: auto;
+    box-shadow: 0 0 20px 3px #00e6b0;
+    background: #fff;
+    border-radius: 30px;
+}
+
+.lr-btn {
+    position: relative;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+div .btnColor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(to left, #00e6b0, #4fa08d);
+    transition: 0.5s;
+}
+
+p.with {
+    position: relative;
+    margin: 65px 40% -7% 20%;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.socials i {
+    margin: 30px 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    width: 47px;
+    height: 45px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #00e6b0, #007157);
+    cursor: pointer;
+    color: white;
+}
+
+div.LorR {
+    display: flex;
+    overflow: hidden !important;
+}
+
+form#loginBox {
+    position: relative;
+    padding: 10px;
+    margin-left: 60px;
+    bottom: -10px;
+    display: grid;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+form#loginBox #logsub {
+    position: relative;
+    bottom: 45px;
+}
+
+form#registerBox {
+    position: relative;
+    left: 150px;
+    display: grid;
+    justify-content: center;
+    grid-gap: 1.7em;
+    transition: 0.5s;
+}
+
+form#loginBox input:not(.lr-submit),
+form#registerBox input:not(.lr-submit) {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    /* border: 1px solid grey; */
+    /* border-radius: 5px; */
+    cursor: pointer;
+    /* border-bottom: 1px solid black; */
+
+    /* width: 300px;
+  height: 32px;
+  font-size: 20px; */
+    padding: 10px;
+    /* margin-bottom: 17px;
+  margin-left: 15px; */
+    border: none;
+    background: inherit;
+    border-bottom: 1px solid grey;
+    border-radius: 7px;
+    box-sizing: border-box;
+    box-shadow: inset -1px -1px 3px rgba(0, 0, 0, 0.6),
+        inset 2px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+form#loginBox input:hover,
+form#registerBox input:hover,
+form#loginBox input:focus,
+form#registerBox input:focus {
+    outline: none;
+    /* border-top: none;
+    border-left: none;
+    border-right: none; */
+    cursor: pointer;
+}
+
+form input::placeholder {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+input.lr-submit {
+    width: 300px;
+    height: 35px;
+    font-size: 20px;
+    position: relative;
+    outline: none !important;
+    border: none !important;
+    background: linear-gradient(to right, #00e6b0, #007157);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Login or Register page end */
