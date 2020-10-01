@@ -6,7 +6,7 @@ import Footer from './components/layout/Footer';
 import UnderCun from './components/pages/UnderCun';
 import Navbar from './components/layout/Navbar';
 import LorR from './components/pages/LorR';
-import PrivateAccess from './components/pages/PrivateAccess';
+// import PrivateAccess from './components/pages/PrivateAccess';
 
 function App() {
   return (
