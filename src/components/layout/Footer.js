@@ -41,7 +41,7 @@ const Footer = () => {
                     <li>Lagos Court</li>
                 </ul>
                 <div>
-                    <img src={logo} alt="Crimistry" style={{ width: '270px', height: '90px' }} />
+                    <img id='footer-logo' src={logo} alt="Crimistry" style={{ width: '270px', height: '90px' }} />
                     <div className="socials">
                         <img src={insta} alt="instagram" />
                         <img src={twitter} alt="twitter" />

@@ -13,7 +13,12 @@ div.container {
 }
 
 /* nav bar */
+.menu-btn {
+  display: none;
+}
+
 nav#navbar {
+  position: sticky;
   width: 90%;
   display: flex;
   justify-content: space-between;
@@ -31,7 +36,7 @@ ul.main-menu li {
   font-size: 18px;
 }
 
-nav ul li:hover {
+nav ul li:hover:not(.dashNavListItem) {
   border-bottom: 1px solid #767676;
   padding-bottom: 2px;
   cursor: pointer;
@@ -57,7 +62,7 @@ a {
   text-decoration: none;
 }
 
-/* global anchor rule */
+/* global anchor rule End */
 
 /* home css */
 div.home {
@@ -65,7 +70,7 @@ div.home {
 }
 
 div.home main {
-  z-index: 10;
+  /* z-index: 10; */
   /* width: 50vw; */
   padding-top: 50px;
 }
@@ -75,6 +80,7 @@ div.home main h1 {
   padding-top: 30px;
   width: 30vw;
   font-size: 30px;
+  font-weight: 900;
   line-height: 40px;
 }
 
@@ -89,7 +95,7 @@ div.home main p {
 div.access {
   display: flex;
   /* justify-content: space-around; */
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
 div.access div.btn {
@@ -129,12 +135,11 @@ footer#main-footer {
   position: relative;
   bottom: 0;
   background: #007157;
-  margin-top: 30px;
 }
 
 #main-footer div.presvg {
   position: relative;
-  bottom: -100px;
+  top: 100px;
   /* margin-top: 40px; */
   display: flex;
   justify-content: space-around;
@@ -165,4 +170,137 @@ div.presvg ul li:nth-child(n + 2) {
   cursor: pointer;
 }
 
-/* footer css */
+/* footer css End */
+
+/* animate the logo */
+
+img#logo:hover {
+  animation: anime 4s ease-in 0.5s infinite alternate;
+}
+
+@keyframes anime {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* mobile css */
+@media (max-width: 1037px) {
+  div.access {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  div.container {
+    /* max-width: 750px; */
+    overflow-x: hidden;
+  }
+
+  nav#navbar a {
+    margin: 0px auto;
+  }
+
+  .menu-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-btn:hover i {
+    opacity: 0.7;
+  }
+
+  nav#navbar ul.main-menu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 50%;
+    height: 100vh;
+    background: #f2f2f2;
+    opacity: 0.9;
+    border-right: 1px solid #ccc;
+    transform: translateX(-3000px);
+    padding: 50px 30px;
+    transition: transform 0.2s ease;
+    z-index: 10000;
+  }
+
+  nav#navbar ul.main-menu.show-menu {
+    transform: translateX(-30px) !important;
+  }
+
+  nav#navbar ul.main-menu.show-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  nav#navbar ul.main-menu.show-menu li:last-child {
+    border-bottom: none;
+  }
+
+  div.home {
+    background: url(../components/assets/01.png) right 10px bottom 70px/80% no-repeat;
+  }
+
+  div.home main {
+    padding-top: 0px;
+  }
+
+  div.home main h1 {
+    width: 60vw;
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  div.home main p {
+    width: 55vw;
+    font-size: 22px;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  div.home-left {
+    display: none;
+  }
+
+  div.access {
+    padding: 30px 0px;
+  }
+
+  #main-footer div.presvg {
+    top: 50px;
+    display: grid;
+    padding-left: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  #footer-logo {
+    margin-top: 5px;
+  }
+
+  #main-footer div.socials {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  #main-footer div.presvg {
+    margin-left: 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 290px) {
+  #main-footer {
+    width: 100vw;
+  }
+}
+
+/* mobile css End */

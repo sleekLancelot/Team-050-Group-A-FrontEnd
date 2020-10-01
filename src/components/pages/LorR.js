@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import Login from './Login';
 import Reg from './Reg';
-import '../../LorR.css';
+import '../../css/LorR.css';
 
 const LorR = () => {
     const [showReg, setShowReg] = useState(true);

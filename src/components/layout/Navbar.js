@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import logo from '../assets/Logo.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const mainMenu = useRef();
+
+    const menuClick = (e) => {
+        mainMenu.current.classList.toggle('show-menu');
+    }
+
+    const closeAfterClick = (e) => {
+        // console.log(e.target.hasAttribute('href'), mainMenu.current.classList.contains('show-menu'));
+        if (mainMenu.current.classList.contains('show-menu') && e.target.hasAttribute('href')) {
+            mainMenu.current.classList.remove('show-menu');
+        }
+    }
+
     return (
         <nav id="navbar">
             <Link to='/'>
-                <img src={logo} alt="Crimistry" style={{ width: '270px', height: '90px' }} />
+                <img id='logo' src={logo} alt="Crimistry" style={{ width: '270px', height: '90px' }} />
             </Link>
 
-            <ul className="main-menu">
+            <div className="menu-btn" onClick={menuClick}>
+                <i className="fas fa-bars fa-2x"></i>
+            </div>
+
+            <ul ref={mainMenu} className="main-menu" onClick={closeAfterClick}>
                 <li>
                     <Link to='/'>Home</Link>
                 </li>
